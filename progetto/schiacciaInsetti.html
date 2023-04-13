@@ -112,9 +112,33 @@
 			
 			obj.setAttribute("passoy", _passo_y);
 
-		}	
+		}
+		
+		
+		  controlla(e) {
+			console.log(e.target.id);
+			document.getElementById(e.target.id).style.display='none';
+			}
+			
+		var insetti = document.getElementsByClassName("insetto");
+			for (i=0; i<insetti.length; i++) {
+				insetti[i].onclick=controlla;
+			}
+		
+		document.addEventListener('keydown', (event) => {
+			var name = event.key;
+			var code = event.code;
+			var keycode = event.keyCode;
+			var p = document.getElementById("immagine1");
+			if (keycode == 39) {
+				p.style.left = (parseInt(p.style.left)+passo)+".px"
+			}
+			if (keycode == 37) {
+				p.style.left = (parseInt(p.style.left)-passo)+".px"
+			}
+			console.log(event);
+		}, false);
 	}
-	
 
 </script>	
 </head>
