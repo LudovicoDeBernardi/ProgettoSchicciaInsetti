@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <style>
+  
+  
+	html{
+		background-image: url("hai_perso.jpg");
+		text-align: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment:fixed;
+	}
+	
+	button{
+		font-family: comic sans ms;
+		background-color: red;
+		border: 5px solid black;
+		border-radius: 30px;
+		padding: 10px 60px;
+		font-size: 50px;
+		color: white;
+		width: 20%;
+		margin-top: 20%;
+		text-align: center;
+		margin-left:0%
+		margin-right:5%;
+  }
+
+</style>
+<script>
+	function cambiaPaginaV(){
+		window.location = "schiacciaInsetti.html";
+	}
+
+
+	function restart(){
+		alert("ritenta sarai piu fortunato :(");
+		setTimeout(cambiaPaginaV,0);
+	}
+	
+</script>
+</head>
+<body>
+
+	<button id="bottone" class="play" onclick="restart()" ><b>RESTART</b></button>
+  
+</body>
+</html>
